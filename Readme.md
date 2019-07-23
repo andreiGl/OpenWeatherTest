@@ -22,3 +22,5 @@ $ cd target
 $ java -jar openweathertest-1.0-SNAPSHOT.war
 ```
 
+Open web browser with the address: 
+http://localhost:8080/
