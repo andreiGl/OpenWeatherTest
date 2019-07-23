@@ -1,6 +1,6 @@
 # OpenWeatherTest
 
-OpenWeatherTest is a java web-app/demo to retrieve from OpenWeatherMap.com weather data for the specified city. The city is user-selected on the main page of the web-app.
+OpenWeatherTest is a java web-app/demo to retrieve weather data for the specified city from OpenWeatherMap.com. The city name is user-selected on the main page of the web-app.
 Application is written using Java 1.8 and Spring Boot 2.1.6. 
 
 ## Installation
