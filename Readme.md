@@ -22,5 +22,26 @@ $ cd target
 $ java -jar openweathertest-1.0-SNAPSHOT.war
 ```
 
-Open web browser with the address: 
+Open a link in a new browser window: 
 http://localhost:8080/
+
+In the case of port number conflict, it is possible to change it by editing 
+```
+OpenWeatherTest/src/resource/application.properties
+```
+and modifying server.port, by default it is set to 8080:
+```
+server.port=8080
+```
+Please do run a 'clean package' after this modification (from the OpenWeatherTest folder):
+```
+$ mvn clean package
+```
+## Implementation Details
+Weather data is being loaded in json format. OpenWeatherMap provides an optional XML mode for data retrieval, but apparently xml response is missing some of the field values, required in this test (ie. datetime).  
+
+Sunrise and sunset times are converted to local time with correspondent timezone. 
+
+Today's date field is also a local date (for the selected city). As a side-effect of different timezones, some cities dates could be shown as yesterday or tomorrow (in relation to the user's local date/time). 
+
+Temperature values (both C and F) are rounded to only one decimal digit.
