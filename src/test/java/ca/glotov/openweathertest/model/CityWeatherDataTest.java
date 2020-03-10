@@ -52,7 +52,7 @@ public class CityWeatherDataTest {
         final CityWeatherData data = new CityWeatherData();
         data.setSunSetTime(1563854778, -25200);
 
-        String expected = "9:06pm";
+        String expected = "9:06p.m.";
         String actual = data.getSunSetTime();
 
         assertNotNull(actual);
@@ -65,7 +65,7 @@ public class CityWeatherDataTest {
         final CityWeatherData data = new CityWeatherData();
         data.setSunRiseTime(1563798671, -25200);
 
-        String expected = "5:31am";
+        String expected = "5:31a.m.";
         String actual = data.getSunRiseTime();
 
         assertNotNull(actual);
